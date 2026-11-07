@@ -1,0 +1,874 @@
+{
+  "model" : "bge-small-zh-v1.5-quantized",
+  "summary" : [ {
+    "negativeQuestions" : 8,
+    "meanRetrievalMs" : 2.725,
+    "answerableQuestions" : 32,
+    "mrrAt3" : 0.75,
+    "mode" : "bm25",
+    "hitRateAt3" : 0.75,
+    "falsePositiveRate" : 0.0
+  }, {
+    "negativeQuestions" : 8,
+    "meanRetrievalMs" : 9.95,
+    "answerableQuestions" : 32,
+    "mrrAt3" : 0.75,
+    "mode" : "vector",
+    "hitRateAt3" : 0.75,
+    "falsePositiveRate" : 0.0
+  }, {
+    "negativeQuestions" : 8,
+    "meanRetrievalMs" : 8.725,
+    "answerableQuestions" : 32,
+    "mrrAt3" : 0.875,
+    "mode" : "hybrid",
+    "hitRateAt3" : 0.875,
+    "falsePositiveRate" : 0.0
+  } ],
+  "dimension" : 512,
+  "scope" : "Authored retrieval diagnostic; not independent or generation accuracy",
+  "details" : [ {
+    "mode" : "bm25",
+    "query" : "怎么减少盐摄入",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM", "WHO-SUGARS", "WHO-FATS" ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "酱油和外卖里面的钠要注意吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "调味品需要看营养标签吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "奶茶和果汁里的糖算不算",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "用白水代替含糖饮料",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "蜂蜜中的糖需要控制吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "蔬菜全谷物和膳食纤维",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS", "WHO-DIVERSITY" ],
+    "durationMs" : 4
+  }, {
+    "mode" : "bm25",
+    "query" : "杂粮和豆类有什么参考资料",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 1
+  }, {
+    "mode" : "bm25",
+    "query" : "怎样选择烹调油和脂肪",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS", "NUTRI-RECORDS" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "工业反式脂肪与油炸食品",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "均衡早餐应该考虑哪些食物",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 1,
+    "documents" : [ "WHO-DIVERSITY" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "能量摄入和消耗需要平衡",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 1,
+    "documents" : [ "WHO-BALANCE", "WHO-SUGARS" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "没有填写卡路里是否表示零摄入",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-BALANCE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "忘记记下晚餐能不能推断没有吃饭",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "可以从餐食描述得到准确蛋白质克数吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "查询记录最多可以查几天",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "NUTRI-RECORDS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 5
+  }, {
+    "mode" : "bm25",
+    "query" : "PDF扫描图片为什么导入失败",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 4
+  }, {
+    "mode" : "bm25",
+    "query" : "别人可以搜索我上传的资料吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "重复导入和替换文档怎么处理",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 4
+  }, {
+    "mode" : "bm25",
+    "query" : "混合检索的分数能代表回答正确率吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 5
+  }, {
+    "mode" : "bm25",
+    "query" : "用Java实现红黑树旋转",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "明天北京下雨吗",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "帮我订飞机票",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 13
+  }, {
+    "mode" : "bm25",
+    "query" : "量子计算的纠缠现象",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "吃得太咸，调味料怎么选",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "不喝甜的，蜂蜜水还要管吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "炒菜用哪种油更合适",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "一天没在软件里填东西就等于饿了一天吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "食物分量不知道能算出营养含量吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS" ],
+    "durationMs" : 4
+  }, {
+    "mode" : "bm25",
+    "query" : "我上传的笔记同事也能看见吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 3
+  }, {
+    "mode" : "bm25",
+    "query" : "文件全是照片能直接搜索吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "新文件覆盖旧文件以后会自动刷新吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "水果榨成汁以后还要限甜度吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "想吃得丰富一点，每顿有哪些类别",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "我吃多吃少要看运动消耗吗",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "除了少放白糖，饮品还要留意什么",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "智能手机怎么修屏幕",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "汽车电池保养注意什么",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "如何做冠状动脉手术",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 2
+  }, {
+    "mode" : "bm25",
+    "query" : "胰岛素具体每天打多少单位",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 1
+  }, {
+    "mode" : "vector",
+    "query" : "怎么减少盐摄入",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 17
+  }, {
+    "mode" : "vector",
+    "query" : "酱油和外卖里面的钠要注意吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "vector",
+    "query" : "调味品需要看营养标签吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "vector",
+    "query" : "奶茶和果汁里的糖算不算",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "vector",
+    "query" : "用白水代替含糖饮料",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 19
+  }, {
+    "mode" : "vector",
+    "query" : "蜂蜜中的糖需要控制吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "vector",
+    "query" : "蔬菜全谷物和膳食纤维",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS" ],
+    "durationMs" : 17
+  }, {
+    "mode" : "vector",
+    "query" : "杂粮和豆类有什么参考资料",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS" ],
+    "durationMs" : 28
+  }, {
+    "mode" : "vector",
+    "query" : "怎样选择烹调油和脂肪",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "vector",
+    "query" : "工业反式脂肪与油炸食品",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 18
+  }, {
+    "mode" : "vector",
+    "query" : "均衡早餐应该考虑哪些食物",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 1,
+    "documents" : [ "WHO-DIVERSITY", "WHO-BALANCE" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "能量摄入和消耗需要平衡",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 1,
+    "documents" : [ "WHO-BALANCE" ],
+    "durationMs" : 19
+  }, {
+    "mode" : "vector",
+    "query" : "没有填写卡路里是否表示零摄入",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 11
+  }, {
+    "mode" : "vector",
+    "query" : "忘记记下晚餐能不能推断没有吃饭",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "可以从餐食描述得到准确蛋白质克数吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-DIVERSITY" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "查询记录最多可以查几天",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "NUTRI-RECORDS" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "PDF扫描图片为什么导入失败",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 9
+  }, {
+    "mode" : "vector",
+    "query" : "别人可以搜索我上传的资料吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "vector",
+    "query" : "重复导入和替换文档怎么处理",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "混合检索的分数能代表回答正确率吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "用Java实现红黑树旋转",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "vector",
+    "query" : "明天北京下雨吗",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "帮我订飞机票",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 13
+  }, {
+    "mode" : "vector",
+    "query" : "量子计算的纠缠现象",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "吃得太咸，调味料怎么选",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "vector",
+    "query" : "不喝甜的，蜂蜜水还要管吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "炒菜用哪种油更合适",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "一天没在软件里填东西就等于饿了一天吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "食物分量不知道能算出营养含量吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-BALANCE", "NUTRI-RECORDS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "我上传的笔记同事也能看见吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "文件全是照片能直接搜索吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "新文件覆盖旧文件以后会自动刷新吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "水果榨成汁以后还要限甜度吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "想吃得丰富一点，每顿有哪些类别",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 1,
+    "documents" : [ "WHO-DIVERSITY" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "vector",
+    "query" : "我吃多吃少要看运动消耗吗",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 1,
+    "documents" : [ "WHO-BALANCE", "WHO-DIVERSITY", "NUTRI-RECORDS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "除了少放白糖，饮品还要留意什么",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "vector",
+    "query" : "智能手机怎么修屏幕",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "汽车电池保养注意什么",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 6
+  }, {
+    "mode" : "vector",
+    "query" : "如何做冠状动脉手术",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "vector",
+    "query" : "胰岛素具体每天打多少单位",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 5
+  }, {
+    "mode" : "hybrid",
+    "query" : "怎么减少盐摄入",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM", "WHO-SUGARS", "WHO-FATS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "hybrid",
+    "query" : "酱油和外卖里面的钠要注意吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "hybrid",
+    "query" : "调味品需要看营养标签吗",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 1,
+    "documents" : [ "WHO-SODIUM" ],
+    "durationMs" : 5
+  }, {
+    "mode" : "hybrid",
+    "query" : "奶茶和果汁里的糖算不算",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 5
+  }, {
+    "mode" : "hybrid",
+    "query" : "用白水代替含糖饮料",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "hybrid",
+    "query" : "蜂蜜中的糖需要控制吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "蔬菜全谷物和膳食纤维",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS", "WHO-DIVERSITY" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "杂粮和豆类有什么参考资料",
+    "expectedDocument" : "WHO-PLANTS",
+    "rank" : 1,
+    "documents" : [ "WHO-PLANTS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "怎样选择烹调油和脂肪",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS", "NUTRI-RECORDS" ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "工业反式脂肪与油炸食品",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 6
+  }, {
+    "mode" : "hybrid",
+    "query" : "均衡早餐应该考虑哪些食物",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 1,
+    "documents" : [ "WHO-DIVERSITY", "WHO-BALANCE" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "能量摄入和消耗需要平衡",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 1,
+    "documents" : [ "WHO-BALANCE", "WHO-SUGARS" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "没有填写卡路里是否表示零摄入",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-BALANCE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 14
+  }, {
+    "mode" : "hybrid",
+    "query" : "忘记记下晚餐能不能推断没有吃饭",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "可以从餐食描述得到准确蛋白质克数吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-DIVERSITY" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "查询记录最多可以查几天",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "NUTRI-RECORDS", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 11
+  }, {
+    "mode" : "hybrid",
+    "query" : "PDF扫描图片为什么导入失败",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "别人可以搜索我上传的资料吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "hybrid",
+    "query" : "重复导入和替换文档怎么处理",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "混合检索的分数能代表回答正确率吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 12
+  }, {
+    "mode" : "hybrid",
+    "query" : "用Java实现红黑树旋转",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "明天北京下雨吗",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "帮我订飞机票",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 6
+  }, {
+    "mode" : "hybrid",
+    "query" : "量子计算的纠缠现象",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 15
+  }, {
+    "mode" : "hybrid",
+    "query" : "吃得太咸，调味料怎么选",
+    "expectedDocument" : "WHO-SODIUM",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 10
+  }, {
+    "mode" : "hybrid",
+    "query" : "不喝甜的，蜂蜜水还要管吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "炒菜用哪种油更合适",
+    "expectedDocument" : "WHO-FATS",
+    "rank" : 1,
+    "documents" : [ "WHO-FATS" ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "一天没在软件里填东西就等于饿了一天吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "hybrid",
+    "query" : "食物分量不知道能算出营养含量吗",
+    "expectedDocument" : "NUTRI-RECORDS",
+    "rank" : 1,
+    "documents" : [ "NUTRI-RECORDS", "WHO-BALANCE", "NUTRI-RECORDS" ],
+    "durationMs" : 8
+  }, {
+    "mode" : "hybrid",
+    "query" : "我上传的笔记同事也能看见吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "文件全是照片能直接搜索吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE", "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 11
+  }, {
+    "mode" : "hybrid",
+    "query" : "新文件覆盖旧文件以后会自动刷新吗",
+    "expectedDocument" : "NUTRI-KNOWLEDGE",
+    "rank" : 1,
+    "documents" : [ "NUTRI-KNOWLEDGE" ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "水果榨成汁以后还要限甜度吗",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "想吃得丰富一点，每顿有哪些类别",
+    "expectedDocument" : "WHO-DIVERSITY",
+    "rank" : 1,
+    "documents" : [ "WHO-DIVERSITY" ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "我吃多吃少要看运动消耗吗",
+    "expectedDocument" : "WHO-BALANCE",
+    "rank" : 1,
+    "documents" : [ "WHO-BALANCE", "WHO-DIVERSITY", "NUTRI-RECORDS" ],
+    "durationMs" : 11
+  }, {
+    "mode" : "hybrid",
+    "query" : "除了少放白糖，饮品还要留意什么",
+    "expectedDocument" : "WHO-SUGARS",
+    "rank" : 1,
+    "documents" : [ "WHO-SUGARS" ],
+    "durationMs" : 11
+  }, {
+    "mode" : "hybrid",
+    "query" : "智能手机怎么修屏幕",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 8
+  }, {
+    "mode" : "hybrid",
+    "query" : "汽车电池保养注意什么",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 7
+  }, {
+    "mode" : "hybrid",
+    "query" : "如何做冠状动脉手术",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 9
+  }, {
+    "mode" : "hybrid",
+    "query" : "胰岛素具体每天打多少单位",
+    "expectedDocument" : null,
+    "rank" : 0,
+    "documents" : [ ],
+    "durationMs" : 8
+  } ],
+  "corpusDocuments" : 8,
+  "corpusChunks" : 10,
+  "questions" : 40
+}

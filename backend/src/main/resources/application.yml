@@ -1,0 +1,81 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/nutritrack?useSSL=true&serverTimezone=Asia/Shanghai&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000}
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:}
+    hikari:
+      connection-timeout: 5000
+  data:
+    redis:
+      host: ${REDIS_HOST:127.0.0.1}
+      port: ${REDIS_PORT:6379}
+      password: ${REDIS_PASSWORD:}
+      database: 0
+      timeout: 2000
+  mail:
+    host: ${MAIL_HOST:smtp.163.com}
+    port: ${MAIL_PORT:465}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail.smtp:
+        auth: true
+        ssl.enable: true
+  main:
+    allow-circular-references: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 50MB
+mail:
+  from: ${MAIL_FROM:}
+server:
+  port: ${SERVER_PORT:8080}
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    display-request-duration: true
+    operationsSorter: alpha
+    defaultModelsExpandDepth: 1
+jwt:
+  # Local fallback rotates on restart; set a stable 64+ byte JWT_SECRET for deployment.
+  secret: ${JWT_SECRET:${random.uuid}${random.uuid}${random.uuid}}
+  expiration: 86400000
+  token-prefix: Bearer
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 5
+file:
+  save-path: ${UPLOAD_PATH:D:/NutriTrack/images/}
+deepseek:
+  base-url: ${AGENT_BASE_URL:https://api.deepseek.com}
+  api-path: /chat/completions
+  api-key: ${AGENT_API_KEY:}
+  model: ${AGENT_MODEL:deepseek-flash}
+  max-prompt-chars: 3000
+nutritrack:
+  rag:
+    data-dir: ${RAG_DATA_DIR:./.nutritrack-rag}
+    chunk-size: 450
+    chunk-overlap: 60
+    min-vector-score: 0.55
+    min-lexical-coverage: 0.15
+    max-document-chunks: 160
+    max-user-documents: 30
+    max-user-chunks: 1000
+  agent:
+    api-key: ${AGENT_API_KEY:}
+    base-url: ${AGENT_BASE_URL:https://api.deepseek.com}
+    model: ${AGENT_MODEL:deepseek-flash}
+    demo-enabled: ${AGENT_DEMO_ENABLED:true}
+    max-iterations: 4
+    max-tool-calls: 8
+    request-timeout-seconds: 20
+    total-timeout-seconds: 45
+    max-history-messages: 12
+    session-ttl-minutes: 60
+    max-sessions: 500

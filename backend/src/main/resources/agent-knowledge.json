@@ -1,0 +1,32 @@
+[
+  {
+    "id": "WHO-DIVERSITY", "title": "WHO：饮食多样性", "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "excerpt": "健康膳食应兼顾多样性与平衡，包含蔬果、豆类、全谷物及适合个人情况的蛋白质来源。具体食量应结合年龄、活动和健康状态。",
+    "keywords": ["健康", "膳食", "饮食建议", "均衡", "营养", "蛋白质", "早餐", "午餐", "晚餐"]
+  },
+  {
+    "id": "WHO-PLANTS", "title": "WHO：蔬果与全谷物", "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "excerpt": "蔬果、豆类与全谷物可提供膳食纤维。选择多样的天然食物，避免主要依赖高度加工食品。",
+    "keywords": ["蔬菜", "水果", "蔬果", "纤维", "全谷物", "便秘", "杂粮"]
+  },
+  {
+    "id": "WHO-SUGARS", "title": "WHO：游离糖", "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "excerpt": "应限制游离糖摄入；含糖饮料、蜂蜜和果汁中的糖也需要计入。以白水替代含糖饮料是可执行的调整。",
+    "keywords": ["糖", "游离糖", "奶茶", "饮料", "果汁", "甜食", "饮水"]
+  },
+  {
+    "id": "WHO-FATS", "title": "WHO：脂肪选择", "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "excerpt": "优先选择不饱和脂肪来源，限制饱和脂肪并避免工业反式脂肪。烹调方式也会影响脂肪摄入。",
+    "keywords": ["脂肪", "油", "油炸", "坚果", "鱼", "烹调", "胆固醇"]
+  },
+  {
+    "id": "WHO-SODIUM", "title": "WHO：减少钠摄入", "url": "https://www.who.int/news-room/fact-sheets/detail/sodium-reduction",
+    "excerpt": "过多钠摄入与血压升高有关。留意加工食品、酱料和调味品中的钠，并通过营养标签比较同类食品。",
+    "keywords": ["钠", "盐", "控盐", "高血压", "酱油", "外卖", "加工食品"]
+  },
+  {
+    "id": "WHO-BALANCE", "title": "WHO：能量平衡", "url": "https://www.who.int/news-room/fact-sheets/detail/healthy-diet",
+    "excerpt": "能量摄入应与消耗相平衡。单凭一餐或不完整记录无法判断全天营养是否充足，也不能据此给出疾病诊断。",
+    "keywords": ["热量", "能量", "卡路里", "减脂", "减重", "增肌", "体重", "趋势", "饮食记录"]
+  }
+]
