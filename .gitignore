@@ -17,11 +17,18 @@ backend/application-prod.properties
 logs/
 backend/.nutritrack-rag/
 
-# Legacy exported media retained locally, excluded from the personal code release.
+# 本地素材
 /datasource/images/
 /docs/*.png
 /演示视频.mp4
 /项目管理记录-飞书.pdf
+
+# 本地笔记和旧版部署资料
+/docs/Agent升级与简历.md
+/docs/Agent架构与验收.md
+/docs/LangChain4j重构说明.md
+/docs/RAG架构与评测.md
+/部署文档（项目文档）.md
 
 ## 本地开发环境配置
 .env
